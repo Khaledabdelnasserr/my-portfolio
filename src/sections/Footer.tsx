@@ -1,7 +1,4 @@
-
-
-import ArrowUpRight from '@/assets/icons/arrow-up-right.svg'
-
+import ArrowUpRight from '@/assets/icons/arrow-up-right.svg';
 
 const footerLinks = [
   {
@@ -20,7 +17,7 @@ const footerLinks = [
     title: 'LinkedIn',
     href: '#',
   },
-]
+];
 
 export const Footer = () => {
   return (
@@ -33,8 +30,8 @@ export const Footer = () => {
         <div className='md:flex-row md:justify-between border-t border-white/15 py-6 text-sm flex flex-col items-center gap-8'>
           <div className='text-white/40'>&copy; 2024. All rights reserved.</div>
           <nav className='flex flex-col items-center gap-8 md:flex-row'>
-            {footerLinks.map(link => (
-              <a href="#" className='inline-flex items-center gap-1.5'>
+            {footerLinks.map((link, index) => (
+              <a href={link.href} key={index} className='inline-flex items-center gap-1.5'>
                 <span className='font-semibold'>{link.title}</span>
                 <ArrowUpRight className='size-4' />
               </a>
@@ -43,5 +40,5 @@ export const Footer = () => {
         </div>
       </div>
     </footer>
-  )
+  );
 };

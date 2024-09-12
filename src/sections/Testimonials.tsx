@@ -52,23 +52,24 @@ export const TestimonialsSection = () => {
         <SectionHeader
           eyebrow="Happy Clients"
           title="What Clients Say about Me"
-          description="Don't just take my word for it , See what my clients have to say about my
-        work."
+          description="Don't just take my word for it, see what my clients have to say about my work."
         />
-        <div className="mt-12 lg:mt-20 flex overflow-x-clip 
-        [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] py-4 -my-4"
+        <div
+          className="mt-12 lg:mt-20 flex overflow-x-clip 
+          [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] py-4 -my-4"
         >
           <div className="flex flex-none gap-8 pr-8 animate-move-left [animation-duration:90s] hover:[animation-play-state:paused]">
             {[...new Array(2)].fill(0).map((_, index) => (
-              <Fragment>
+              <Fragment key={index}>
                 {testimonials.map((testimonial) => (
                   <Card
                     key={testimonial.name}
                     className="max-w-xs md:p-8 p-6 md:max-w-md hover:-rotate-3 transition duration-300"
                   >
                     <div className="flex gap-4 items-center">
-                      <div className="size-14 bg-gray-700 inline-flex
-                  rounded-full items-center justify-center flex-shrink-0"
+                      <div
+                        className="size-14 bg-gray-700 inline-flex
+                        rounded-full items-center justify-center flex-shrink-0"
                       >
                         <Image
                           src={testimonial.avatar}
@@ -89,6 +90,6 @@ export const TestimonialsSection = () => {
           </div>
         </div>
       </div>
-    </div >
-  )
+    </div>
+  );
 };

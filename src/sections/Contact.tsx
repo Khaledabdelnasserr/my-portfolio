@@ -1,8 +1,5 @@
-
-
-
-import ArrowUpRightIcon from '@/assets/icons/arrow-up-right.svg'
-import grainImage from '@/assets/images/grain.jpg'
+import ArrowUpRightIcon from '@/assets/icons/arrow-up-right.svg';
+import grainImage from '@/assets/images/grain.jpg';
 
 export const ContactSection = () => {
   return (
@@ -15,8 +12,8 @@ export const ContactSection = () => {
           }}></div>
           <div className='flex flex-col gap-8 items-center md:flex-row md:gap-16'>
             <div className=''>
-              <h2 className='font-serif text-black text-2xl md:text-3xl'>let's create something amazing together</h2>
-              <p className='text-sm text-gray-600 mt-2 md:text-base'>Ready to bring your next project to life? let's connect and discuss how I can help you achieve your goals.</p>
+              <h2 className='font-serif text-black text-2xl md:text-3xl'>let&apos;s create something amazing together</h2>
+              <p className='text-sm text-gray-600 mt-2 md:text-base'>Ready to bring your next project to life? let&apos;s connect and discuss how I can help you achieve your goals.</p>
             </div>
             <div className=''>
               <button className='text-white bg-gray-900 inline-flex items-center px-6 h-12 rounded-xl gap-2 w-max border border-gray-900'>
@@ -28,5 +25,5 @@ export const ContactSection = () => {
         </div>
       </div>
     </div >
-  )
+  );
 };

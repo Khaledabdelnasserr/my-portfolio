@@ -76,7 +76,7 @@ export const ProjectsSection = () => {
                   <hr className="border-t-2 border-white/5 mt-4 md:mt-5" />
                   <ul className="flex flex-col gap-4 mt-4 md:mt-5 ">
                     {project.results.map((result) => (
-                      <li className="flex gap-2 md:text-base  text-sm text-white/50">
+                      <li key={result.title} className="flex gap-2 md:text-base text-sm text-white/50">
                         <CheckCircleIcon className="size-5 md:size-6" />
                         <span>{result.title}</span>
                       </li>
@@ -90,7 +90,10 @@ export const ProjectsSection = () => {
                   </a>
                 </div>
                 <div className="relative">
-                  <Image src={project.image} alt={project.title} className="mt-8 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none"
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    className="mt-8 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none"
                   />
                 </div>
               </div>
@@ -98,5 +101,6 @@ export const ProjectsSection = () => {
           ))}
         </div>
       </div>
-    </section>)
+    </section>
+  );
 };
